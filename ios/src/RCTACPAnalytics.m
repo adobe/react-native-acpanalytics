@@ -40,11 +40,15 @@ RCT_EXPORT_METHOD(clearQueue) {
 }
 
 RCT_EXPORT_METHOD(getQueueSize: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    resolve([ACPAnalytics getQueueSize]);
+    [ACPAnalytics getQueueSize:^(NSUInteger queueSize) {
+        resolve([NSNumber numberWithUnsignedInteger:queueSize]);
+    }];
 }
 
 RCT_EXPORT_METHOD(getTrackingIdentifier: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    resolve([ACPAnalytics getTrackingIdentifier]);
+    [ACPAnalytics getTrackingIdentifier:^(NSString * _Nullable trackingIdentifier) {
+        resolve(trackingIdentifier);
+    }];
 }
 
 RCT_EXPORT_METHOD(sendQueuedHits) {
@@ -52,13 +56,14 @@ RCT_EXPORT_METHOD(sendQueuedHits) {
 }
 
 RCT_EXPORT_METHOD(getVisitorIdentifier: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    resolve([ACPAnalytics getVisitorIdentifier]);
+    [ACPAnalytics getVisitorIdentifier:^(NSString * _Nullable visitorIdentifier) {
+        resolve(visitorIdentifier);
+    }];
 }
 
 RCT_EXPORT_METHOD(setVisitorIdentifier: (nonnull NSString*) visitorIdentifier) {
     [ACPAnalytics setVisitorIdentifier:visitorIdentifier];
 }
 
-
 @end
-  
+
