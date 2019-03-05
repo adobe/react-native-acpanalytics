@@ -61,13 +61,18 @@ public void onCreate() {
 
 ### [Analytics](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
 
+##### Importing the extension:
+```javascript
+import {ACPAnalytics} from 'react-native-acpanalytics';
+```
+
 ##### Getting the extension version:
 
 ```javascript
 ACPAnalytics.extensionVersion().then(version => console.log("AMSDK: ACPAnalytics version: " + version));
 ```
 
-##### Registering the extension with Core:
+##### Registering the extension with ACPCore:
 
 ```javascript
 ACPAnalytics.registerExtension();
