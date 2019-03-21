@@ -35,8 +35,10 @@ RCT_EXPORT_METHOD(registerExtension) {
     [ACPAnalytics registerExtension];
 }
 
-RCT_EXPORT_METHOD(clearQueue) {
-    [ACPAnalytics clearQueue];
+RCT_EXPORT_METHOD(getTrackingIdentifier: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
+    [ACPAnalytics getTrackingIdentifier:^(NSString * _Nullable trackingIdentifier) {
+        resolve(trackingIdentifier);
+    }];
 }
 
 RCT_EXPORT_METHOD(getQueueSize: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
@@ -45,10 +47,8 @@ RCT_EXPORT_METHOD(getQueueSize: (RCTPromiseResolveBlock) resolve rejecter:(RCTPr
     }];
 }
 
-RCT_EXPORT_METHOD(getTrackingIdentifier: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    [ACPAnalytics getTrackingIdentifier:^(NSString * _Nullable trackingIdentifier) {
-        resolve(trackingIdentifier);
-    }];
+RCT_EXPORT_METHOD(clearQueue) {
+    [ACPAnalytics clearQueue];
 }
 
 RCT_EXPORT_METHOD(sendQueuedHits) {
@@ -61,9 +61,8 @@ RCT_EXPORT_METHOD(getVisitorIdentifier: (RCTPromiseResolveBlock) resolve rejecte
     }];
 }
 
-RCT_EXPORT_METHOD(setVisitorIdentifier: (nonnull NSString*) visitorIdentifier) {
+RCT_EXPORT_METHOD(setVisitorIdentifier: (nullable NSString*) visitorIdentifier) {
     [ACPAnalytics setVisitorIdentifier:visitorIdentifier];
 }
 
 @end
-

@@ -23,21 +23,16 @@ public class RCTACPAnalyticsModule extends ReactContextBaseJavaModule {
         return "ACPAnalytics";
     }
 
-    /**
-     * Returns the version for the {@code Analytics} extension
-     *
-     * @param promise A {@link Promise} invoked with the extension version
-     */
     @ReactMethod
     public void extensionVersion(final Promise promise) {
         promise.resolve(Analytics.extensionVersion());
     }
 
-    /**
-     * Retrieves the analytics tracking identifier generated for this app/device instance.
-     *
-     * @param promise {@code Promise} invoked with the analytics identifier {@code String} value
-     */
+    @ReactMethod
+    public void registerExtension() {
+      Analytics.registerExtension();
+    }
+
     @ReactMethod
     public void getTrackingIdentifier(final Promise promise) {
         Analytics.getTrackingIdentifier(new AdobeCallback<String>() {
@@ -48,11 +43,6 @@ public class RCTACPAnalyticsModule extends ReactContextBaseJavaModule {
         });
     }
 
-    /**
-     * Retrieves the total number of analytics hits currently in the tracking queue.
-     *
-     * @param promise {@code Callback} invoked with the queue size {@code long} value
-     */
     @ReactMethod
         public void getQueueSize(final Promise promise) {
         Analytics.getQueueSize(new AdobeCallback<Long>() {
@@ -63,29 +53,16 @@ public class RCTACPAnalyticsModule extends ReactContextBaseJavaModule {
         });
     }
 
-    /**
-     * Clears all unsent analytics hits from the tracking queue.
-     * <p>
-     * NOTE: Use caution when clearing the queue manually. This process cannot be reversed.
-     */
     @ReactMethod
     public void clearQueue() {
         Analytics.clearQueue();
     }
 
-    /**
-     * Forces analytics to send all queued hits regardless of current batch options.
-     */
     @ReactMethod
     public void sendQueuedHits() {
         Analytics.sendQueuedHits();
     }
 
-    /**
-     * Retrieves the visitor identifier
-     *
-     * @param promise {@code Callback} invoked with the visitor identifier {@code String} value
-     */
     @ReactMethod
     public void getVisitorIdentifier(final Promise promise) {
         Analytics.getVisitorIdentifier(new AdobeCallback<String>() {
@@ -96,14 +73,9 @@ public class RCTACPAnalyticsModule extends ReactContextBaseJavaModule {
         });
     }
 
-    /**
-     * Retrieves the visitor identifier
-     *
-     * @param visitorID {@code String} new value for visitor identifier
-     */
     @ReactMethod
-    public void setVisitorIdentifier(final String visitorID) {
-        Analytics.setVisitorIdentifier(visitorID);
+    public void setVisitorIdentifier(final String vid) {
+        Analytics.setVisitorIdentifier(vid);
     }
 
 }

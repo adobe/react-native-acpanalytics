@@ -19,10 +19,8 @@
 'use strict';
 
 module.exports = {
-
-  //native modules
+  // Native modules
   get ACPAnalytics() {
     return require('./ACPAnalytics');
   },
-
 };
