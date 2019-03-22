@@ -29,7 +29,7 @@ public class RCTACPAnalyticsModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void registerExtension() {
+    public void registerExtension() throws Exception {
       Analytics.registerExtension();
     }
 
