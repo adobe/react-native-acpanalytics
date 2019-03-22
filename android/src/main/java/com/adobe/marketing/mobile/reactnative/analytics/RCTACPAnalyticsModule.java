@@ -1,5 +1,5 @@
 
-package com.adobe.marketing.mobile.reactnative;
+package com.adobe.marketing.mobile.reactnative.analytics;
 
 import com.adobe.marketing.mobile.AdobeCallback;
 import com.adobe.marketing.mobile.Analytics;

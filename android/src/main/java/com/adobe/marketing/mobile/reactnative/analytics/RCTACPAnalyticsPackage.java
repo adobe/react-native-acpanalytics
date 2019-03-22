@@ -1,5 +1,5 @@
 
-package com.adobe.marketing.mobile.reactnative;
+package com.adobe.marketing.mobile.reactnative.analytics;
 
 import java.util.Arrays;
 import java.util.Collections;
