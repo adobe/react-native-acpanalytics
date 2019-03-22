@@ -40,23 +40,6 @@ npm install react-native-acpanalytics
 react-native link react-native-acpanalytics
 ```
 
-### 3. Configure native projects
-
-#### 3.1 Android project
-
-Navigate to `MainApplication.java` under `app/src/main/java/com/<project name>/` and add a call to `RCTACPCoreModule.setApplication()` inside of `onCreate()`.
-
-```java
-import com.adobe.marketing.mobile.reactnative.RCTACPCorePackage; // import the package
-
-@Override
-public void onCreate() {
-	super.onCreate();
-	//...
-	RCTACPCoreModule.setApplication(this); // add this line
-}
-```
-
 ## Usage
 
 ### [Analytics](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
