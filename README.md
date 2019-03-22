@@ -110,13 +110,13 @@ ACPAnalytics.getVisitorIdentifier().then(vid => console.log("AMSDK: Visitor iden
 ##### Track app actions
 
 ```javascript
-ACPCore.trackAction(TODO);
+ACPCore.trackAction("action", {"mytest": "action"});
 ```
 
 ##### Track app states
 
 ```javascript
-ACPCore.trackState(TODO);
+ACPCore.trackState("state", {"mytest": "state"});
 ```
 
 ## License
