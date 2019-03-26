@@ -37,9 +37,9 @@ export default class App extends Component<Props> {
   }
 
   initSDK() {
-    console.log("AMSDK IMPORT: ACPAnalytics = " + ACPAnalytics);
-    ACPCore.setLogLevel("ACP_LOG_LEVEL_VERBOSE");
-    ACPCore.setPrivacyStatus("ACP_PRIVACY_STATUS_OPT_IN");
+    console.log("AdobeExperienceSDK IMPORT: ACPAnalytics = " + ACPAnalytics);
+    ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
+    ACPCore.setPrivacyStatus(ACPMobilePrivacyStatus.OPT_IN);
     ACPCore.configureWithAppId("launch-ENdd92076b6d40443284824b50647ac784");
     ACPLifecycle.registerExtension();
     ACPIdentity.registerExtension();
@@ -49,19 +49,19 @@ export default class App extends Component<Props> {
   }
 
   coreExtensionVersion() {
-    ACPCore.extensionVersion().then(version => console.log("AMSDK: ACPCore version: " + version));
+    ACPCore.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPCore version: " + version));
   }
 
   analyticsExtensionVersion() {
-    ACPAnalytics.extensionVersion().then(version => console.log("AMSDK: ACPAnalytics version: " + version));
+    ACPAnalytics.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPAnalytics version: " + version));
   }
 
   getTrackingIdentifier() {
-    ACPAnalytics.getTrackingIdentifier().then(id => console.log("AMSDK: ACPAnalytics tracking identifier: " + id));
+    ACPAnalytics.getTrackingIdentifier().then(id => console.log("AdobeExperienceSDK: ACPAnalytics tracking identifier: " + id));
   }
 
   getQueueSize() {
-    ACPAnalytics.getQueueSize().then(size => console.log("AMSDK: ACPAnalytics queue size: " + size));
+    ACPAnalytics.getQueueSize().then(size => console.log("AdobeExperienceSDK: ACPAnalytics queue size: " + size));
   }
 
   clearQueue() {
@@ -73,7 +73,7 @@ export default class App extends Component<Props> {
   }
 
   getVisitorIdentifier() {
-    ACPAnalytics.getVisitorIdentifier().then(vid => console.log("AMSDK: ACPAnalytics visitor id: " + vid));
+    ACPAnalytics.getVisitorIdentifier().then(vid => console.log("AdobeExperienceSDK: ACPAnalytics visitor id: " + vid));
   }
 
   setVisitorIdentifier() {
