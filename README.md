@@ -27,7 +27,7 @@ react-native link react-native-acpanalytics
 
 ## Usage
 
-### [Analytics](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
+### [Analytics](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics)
 
 ##### Importing the extension:
 ```javascript
@@ -37,7 +37,7 @@ import {ACPAnalytics} from 'react-native-acpanalytics';
 ##### Getting the extension version:
 
 ```javascript
-ACPAnalytics.extensionVersion().then(version => console.log("AMSDK: ACPAnalytics version: " + version));
+ACPAnalytics.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPAnalytics version: " + version));
 ```
 
 ##### Registering the extension with ACPCore:
@@ -49,7 +49,7 @@ ACPAnalytics.registerExtension();
 ##### Get the tracking identifier
 
 ```javascript
-ACPAnalytics.getTrackingIdentifier().then(identifier => console.log("AMSDK: Tracking identifier: " + identifier));
+ACPAnalytics.getTrackingIdentifier().then(identifier => console.log("AdobeExperienceSDK: Tracking identifier: " + identifier));
 ```
 ##### Send queued hits
 
@@ -60,7 +60,7 @@ ACPAnalytics.sendQueuedHits();
 ##### Get the queue size
 
 ```javascript
-ACPAnalytics.getQueueSize().then(size => console.log("AMSDK: Queue size: " + size));
+ACPAnalytics.getQueueSize().then(size => console.log("AdobeExperienceSDK: Queue size: " + size));
 ```
 
 ##### Set the custom visitor identifier
@@ -72,7 +72,7 @@ ACPAnalytics.setVisitorIdentifier("yourVisitorId");
 ##### Get the custom visitor identifier
 
 ```javascript
-ACPAnalytics.getVisitorIdentifier().then(vid => console.log("AMSDK: Visitor identifier: " + vid));
+ACPAnalytics.getVisitorIdentifier().then(vid => console.log("AdobeExperienceSDK: Visitor identifier: " + vid));
 ```
 
 ##### Track app actions
