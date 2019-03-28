@@ -30,7 +30,7 @@ module.exports = {
   },
 
   /**
-   * Registers the ACPIdentity extension with ACPCore
+   * Registers the ACPAnalytics extension with ACPCore
    */
   registerExtension() {
     RCTACPAnalytics.registerExtension();
