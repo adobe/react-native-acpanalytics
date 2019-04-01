@@ -1,12 +1,12 @@
 
 # React Native AEP Analytics Extension
 
-`react-native-acpanalytics` is a wrapper around the iOS and Android [AEP Analytics SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics) to allow for integration with React Native applications. Functionality to enable Adobe Analytics is provided entirely through JavaScript documented below.
+`@adobe/react-native-acpanalytics` is a wrapper around the iOS and Android [AEP Analytics SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics) to allow for integration with React Native applications. Functionality to enable Adobe Analytics is provided entirely through JavaScript documented below.
 
 
 ## Installation
 
-You need to install the SDK with [npm](https://www.npmjs.com/) and configure the native Android/iOS project in your react native project. Before installing the Analytics extension it is recommended to begin by installing the Core extension `react-native-acpcore`.
+You need to install the SDK with [npm](https://www.npmjs.com/) and configure the native Android/iOS project in your react native project. Before installing the Analytics extension it is recommended to begin by installing the Core extension `@adobe/react-native-acpcore`.
 
 ### 1. Create React Native project
 
@@ -18,11 +18,11 @@ react-native init MyReactApp
 
 ### 2. Install JavaScript packages
 
-Install and link the `react-native-acpanalytics` package:
+Install and link the `@adobe/react-native-acpanalytics` package:
 
 ```bash
-npm install react-native-acpanalytics
-react-native link react-native-acpanalytics
+npm install @adobe/react-native-acpanalytics
+react-native link @adobe/react-native-acpanalytics
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ react-native link react-native-acpanalytics
 
 ##### Importing the extension:
 ```javascript
-import {ACPAnalytics} from 'react-native-acpanalytics';
+import {ACPAnalytics} from '@adobe/react-native-acpanalytics';
 ```
 
 ##### Getting the extension version:
