@@ -1,7 +1,7 @@
 rootProject.name = 'ACPCoreSample'
-include ':react-native-acpanalytics'
-project(':react-native-acpanalytics').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-acpanalytics/android')
-include ':react-native-acpcore'
-project(':react-native-acpcore').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-acpcore/android')
+include ':@adobe_react-native-acpanalytics'
+project(':@adobe_react-native-acpanalytics').projectDir = new File(rootProject.projectDir, '../node_modules/@adobe/react-native-acpanalytics/android')
+include ':@adobe_react-native-acpcore'
+project(':@adobe_react-native-acpcore').projectDir = new File(rootProject.projectDir, '../node_modules/@adobe/react-native-acpcore/android')
 
 include ':app'
