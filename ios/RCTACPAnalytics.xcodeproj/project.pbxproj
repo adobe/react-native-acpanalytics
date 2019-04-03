@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		122F7612767C591DE449B41F /* libPods-RCTACPAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B94C2C8589A85EB9D7F7C6A /* libPods-RCTACPAnalytics.a */; };
 		2184F942222729BB005C3F03 /* libACPAnalytics_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2184F941222729BB005C3F03 /* libACPAnalytics_iOS.a */; };
 		B3E7B58A1CC2AC0600A0062D /* RCTACPAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RCTACPAnalytics.m */; };
 /* End PBXBuildFile section */
@@ -24,9 +25,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B94C2C8589A85EB9D7F7C6A /* libPods-RCTACPAnalytics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTACPAnalytics.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		134814201AA4EA6300B7C361 /* libRCTACPAnalytics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTACPAnalytics.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2184F941222729BB005C3F03 /* libACPAnalytics_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libACPAnalytics_iOS.a; sourceTree = "<group>"; };
 		2184F944222729F5005C3F03 /* ACPAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPAnalytics.h; sourceTree = "<group>"; };
+		44D7C26AE2B85C99C6ADC975 /* Pods-RCTACPAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTACPAnalytics.release.xcconfig"; path = "Target Support Files/Pods-RCTACPAnalytics/Pods-RCTACPAnalytics.release.xcconfig"; sourceTree = "<group>"; };
+		5BC814AB5A174EE8FCD541A7 /* Pods-RCTACPAnalytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTACPAnalytics.debug.xcconfig"; path = "Target Support Files/Pods-RCTACPAnalytics/Pods-RCTACPAnalytics.debug.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RCTACPAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTACPAnalytics.h; path = src/RCTACPAnalytics.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RCTACPAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTACPAnalytics.m; path = src/RCTACPAnalytics.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,6 +41,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2184F942222729BB005C3F03 /* libACPAnalytics_iOS.a in Frameworks */,
+				122F7612767C591DE449B41F /* libPods-RCTACPAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +74,14 @@
 			path = include;
 			sourceTree = "<group>";
 		};
+		2AB45CF97919657C238FC63E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B94C2C8589A85EB9D7F7C6A /* libPods-RCTACPAnalytics.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
@@ -76,7 +89,19 @@
 				B3E7B5891CC2AC0600A0062D /* RCTACPAnalytics.m */,
 				2184F940222728E2005C3F03 /* Libs */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				6C590EBFBDD34EA9A03DB20E /* Pods */,
+				2AB45CF97919657C238FC63E /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		6C590EBFBDD34EA9A03DB20E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BC814AB5A174EE8FCD541A7 /* Pods-RCTACPAnalytics.debug.xcconfig */,
+				44D7C26AE2B85C99C6ADC975 /* Pods-RCTACPAnalytics.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +111,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RCTACPAnalytics" */;
 			buildPhases = (
+				10EDC612D0E4A99F115C14CE /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -129,6 +155,31 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10EDC612D0E4A99F115C14CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RCTACPAnalytics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
@@ -225,6 +276,7 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BC814AB5A174EE8FCD541A7 /* Pods-RCTACPAnalytics.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -247,6 +299,7 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44D7C26AE2B85C99C6ADC975 /* Pods-RCTACPAnalytics.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
