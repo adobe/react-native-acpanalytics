@@ -1,12 +1,13 @@
 {
   "name": "@adobe/react-native-acpanalytics",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-alpha.37",
   "description": "Adobe Experience Platform support for React Native apps.",
   "homepage": "https://aep-sdks.gitbook.io/docs/",
   "license": "See LICENSE.md",
   "main": "./js/index.js",
   "scripts": {
-    "flow": "flow"
+    "flow": "flow",
+    "prepublish": "cd ios && pod deintegrate"
   },
   "keywords": [
     "react-native",
