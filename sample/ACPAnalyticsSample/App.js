@@ -40,7 +40,7 @@ export default class App extends Component<Props> {
     console.log("AdobeExperienceSDK IMPORT: ACPAnalytics = " + ACPAnalytics);
     ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
     ACPCore.setPrivacyStatus(ACPMobilePrivacyStatus.OPT_IN);
-    ACPCore.configureWithAppId("launch-ENdd92076b6d40443284824b50647ac784");
+    ACPCore.configureWithAppId("launch-EN1a68f9bc5b3c475b8c232adc3f8011fb");
     ACPLifecycle.registerExtension();
     ACPIdentity.registerExtension();
     ACPSignal.registerExtension();
