@@ -3,8 +3,8 @@ package com.acpcoresample;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.adobe.marketing.mobile.reactnative.analytics.RCTACPAnalyticsPackage;
 import com.adobe.marketing.mobile.reactnative.RCTACPCorePackage;
+import com.adobe.marketing.mobile.reactnative.analytics.RCTACPAnalyticsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -26,8 +26,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new RCTACPAnalyticsPackage(),
-            new RCTACPCorePackage()
+            new RCTACPCorePackage(),
+            new RCTACPAnalyticsPackage()
       );
     }
 
