@@ -1,6 +1,6 @@
 {
   "name": "@adobe/react-native-acpanalytics",
-  "version": "1.1.0-alpha.4",
+  "version": "1.0.0",
   "description": "Adobe Experience Platform support for React Native apps.",
   "homepage": "https://aep-sdks.gitbook.io/docs/",
   "license": "See LICENSE.md",
@@ -22,7 +22,7 @@
   },
   "peerDependencies": {
     "react-native": ">=0.44.0",
-    "@adobe/react-native-acpcore": ">=1.0.0-alpha"
+    "@adobe/react-native-acpcore": ">=1.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
