@@ -30,7 +30,6 @@ export default class App extends Component<Props> {
         <Button title="ACPAnalytics::setVisitorIdentifier(testID)" onPress={() => this.setVisitorIdentifier()}/>
         <Button title="ACPCore::trackState(...)" onPress={() => this.trackState()}/>
         <Button title="ACPCore::trackAction(...)" onPress={() => this.trackAction()}/>
-
         </ScrollView>
       </View>
     );
