@@ -63,6 +63,12 @@ ACPAnalytics.sendQueuedHits();
 ACPAnalytics.getQueueSize().then(size => console.log("AdobeExperienceSDK: Queue size: " + size));
 ```
 
+##### Clear queued hits
+
+```javascript
+ACPAnalytics.clearQueue();
+```
+
 ##### Set the custom visitor identifier
 
 ```javascript
