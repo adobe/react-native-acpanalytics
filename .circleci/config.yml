@@ -37,7 +37,7 @@ jobs:
   android:
     # working_directory: ~/react-native-acpanalytics/android
     docker:
-      - image: circleci/android:api-27-node8-alpha
+      - image: circleci/android:api-28
     steps:
       - checkout:
 
