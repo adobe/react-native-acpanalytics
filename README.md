@@ -93,6 +93,8 @@ ACPCore.trackAction("action", {"mytest": "action"});
 ACPCore.trackState("state", {"mytest": "state"});
 ```
 
-## License
+## Contributing
+See [CONTRIBUTING](CONTRIBUTING.md)
 
-See LICENSE.md
+## License
+See [LICENSE](LICENSE)
