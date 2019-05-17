@@ -103,7 +103,7 @@
 version: 2.1
 jobs:
   node:
-    working_directory: ~/
+    working_directory: ~/circleci
     docker:
       - image: circleci/node:8
     steps:
