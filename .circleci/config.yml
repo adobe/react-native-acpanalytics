@@ -126,7 +126,7 @@ jobs:
       #       JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
 
       - persist_to_workspace:
-          root: ~/
+          root: ~/circleci
           paths:
             - node_modules
 
@@ -137,15 +137,15 @@ jobs:
       #     path: test-results
 
   android:
-    working_directory: ~/android
+    working_directory: ~/circlei/android
     docker:
       - image: circleci/android:api-27-node8-alpha
     steps:
       - checkout:
-          path: ~/
+          path: ~/circleci
 
       - attach_workspace:
-          at: ~/
+          at: ~/circleci
 
       - restore_cache:
           key: bundle-v1-{{ checksum "Gemfile.lock" }}-{{ arch }}
@@ -177,7 +177,7 @@ jobs:
   ios:
     macos:
       xcode: "10.0"
-    working_directory: ~/
+    working_directory: ~/circleci
 
     # use a --login shell so our "set Ruby version" command gets picked up for later steps
     shell: /bin/bash --login -o pipefail
