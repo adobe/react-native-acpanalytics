@@ -97,4 +97,4 @@ ACPCore.trackState("state", {"mytest": "state"});
 See [CONTRIBUTING](CONTRIBUTING.md)
 
 ## License
-See [LICENSE](LICENSE.md)
+See [LICENSE](LICENSE)
