@@ -1,4 +1,4 @@
-version: 2.0
+version: 2
 jobs:
   node:
     working_directory: ~/react-native-acpanalytics
@@ -22,8 +22,6 @@ jobs:
       #       yarn run test
       #     environment:
       #       JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
-
-      run: ls
 
       - persist_to_workspace:
           root: ~/react-native-acpanalytics
@@ -137,7 +135,7 @@ jobs:
       #     path: ios/test-results
 
 workflows:
-  version: 2.0
+  version: 2
   node-android-ios:
     jobs:
       - node
