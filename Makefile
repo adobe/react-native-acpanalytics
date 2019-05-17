@@ -14,3 +14,4 @@ build-android:
 
 build-ios: setup
 	(cd ios && xcodebuild build -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME})
+	
