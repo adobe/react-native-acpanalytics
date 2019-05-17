@@ -1,0 +1,249 @@
+# version: 2.1
+# jobs:
+#   node:
+#       working_directory: ~/
+#       docker:
+#         - image: circleci/node:8
+#       steps:
+#         - checkout
+#
+#         - restore_cache:
+#             key: node-v1-{{ checksum "package-lock.json" }}-{{ arch }}
+#
+#         - restore_cache:
+#             key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+#
+#         - run: npm install
+#
+#         - save_cache:
+#             key: node-v1-{{ checksum "package-lock.json" }}-{{ arch }}
+#             paths:
+#               - ~/.cache/yarn
+#
+#         - save_cache:
+#             key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+#             paths:
+#               - node_modules
+#
+#         - persist_to_workspace:
+#             root: ~/
+#             paths:
+#               - node_modules
+#
+#   ios:
+#     macos:
+#       xcode: "10.0"
+#
+#     steps:
+#       # restore pods related caches
+#       - restore_cache:
+#           keys:
+#             - cocoapods-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Podfile.lock" }}
+#             - cocoapods-cache-v1-{{ arch }}-{{ .Branch }}
+#             - cocoapods-cache-v1
+#             - 1-gems-{{ checksum "Gemfile.lock" }}
+#
+#       # make sure we're on the right version of cocoapods
+#       - run:
+#           name: Verify Cocoapods Version
+#           command: bundle check || bundle install --path vendor/bundle
+#
+#       # save cocoapods version gem data
+#       - save_cache:
+#           key: 1-gems-{{ checksum "Gemfile.lock" }}
+#           paths:
+#             - vendor/bundle
+#
+#       # update CocoaPods
+#       - run:
+#           name: Update Cocoapods
+#           command: (bundle exec pod repo update && bundle exec pod update)
+#
+#       # save pods related files
+#       - save_cache:
+#           key: cocoapods-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Podfile.lock" }}
+#           paths:
+#             - ./Pods
+#             - ~/.cocoapods
+#
+#       # build
+#       - run:
+#           name: Building iOS Project
+#           command: make build-ios
+#
+#     # macos:
+#       # xcode: "10.0.0"
+#       # TODO android studio version
+#
+#     # steps:
+#     #   - checkout
+#     #
+#     # - restore_cache:
+#     #     key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+#     #
+#     #  - run:
+#     #     name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
+#     #     command: cd android && sudo chmod +x ./gradlew
+#     #
+#     #   - run:
+#     #     name: Bulding React Native Module
+#     #     command: make build
+#     #
+# workflows:
+#   version: 2.1
+#   # node-android-ios:
+#   #   jobs:
+#   #     - node
+#   #     - android:
+#   #         requires:
+#   #           - node
+#       - ios:
+#           requires:
+#             - node
+version: 2.1
+jobs:
+  node:
+    working_directory: ~/
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+          paths:
+            - node_modules
+
+      # - run:
+      #     name: jest tests
+      #     command: |
+      #       mkdir -p test-results/jest
+      #       yarn run test
+      #     environment:
+      #       JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
+
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - node_modules
+
+      # - store_test_results:
+      #     path: test-results
+      #
+      # - store_artifacts:
+      #     path: test-results
+
+  android:
+    working_directory: ~/android
+    docker:
+      - image: circleci/android:api-27-node8-alpha
+    steps:
+      - checkout:
+          path: ~/
+
+      - attach_workspace:
+          at: ~/
+
+      - restore_cache:
+          key: bundle-v1-{{ checksum "Gemfile.lock" }}-{{ arch }}
+
+      - run: bundle install
+
+      - save_cache:
+          key: bundle-v1-{{ checksum "Gemfile.lock" }}-{{ arch }}
+          paths:
+            - vendor/bundle
+
+      - run:
+          name: Building Android Project
+          command: make build-android
+
+      # - run:
+      #     name: fastlane tests
+      #     command: |
+      #       mkdir -p test-results/fastlane
+      #       bundle exec fastlane test
+      #       mv fastlane/report.xml test-results/fastlane
+
+      # - store_test_results:
+      #     path: test-results
+      #
+      # - store_artifacts:
+      #     path: test-results
+
+  ios:
+    macos:
+      xcode: "10.0"
+    working_directory: ~/
+
+    # use a --login shell so our "set Ruby version" command gets picked up for later steps
+    shell: /bin/bash --login -o pipefail
+
+    steps:
+      - checkout
+
+      - run:
+          name: set Ruby version
+          command:  echo "ruby-2.4" > ~/.ruby-version
+
+      - restore_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+
+      # not using a workspace here as Node versions
+      # differ between our macOS executor image and the Docker containers above
+      - run: npm install
+
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+          paths:
+            - node_modules
+
+      - restore_cache:
+          key: bundle-v1-{{ checksum "ios/Gemfile.lock" }}-{{ arch }}
+
+      - run:
+          command: bundle install
+          working_directory: ios
+
+      - save_cache:
+          key: bundle-v1-{{ checksum "ios/Gemfile.lock" }}-{{ arch }}
+          paths:
+            - vendor/bundle
+
+      - run:
+          name: Building iOS Project
+          command: make build-ios
+
+      # - run:
+      #     command: bundle exec fastlane test
+      #     working_directory: ios
+      #
+      # - run:
+      #     name: set up test results
+      #     working_directory: ios
+      #     when: always
+      #     command: |
+      #       mkdir -p test-results/fastlane test-results/xcode
+      #       mv fastlane/report.xml test-results/fastlane
+      #       mv fastlane/test_output/report.junit test-results/xcode/junit.xml
+      #
+      # - store_test_results:
+      #     path: ios/test-results
+      #
+      # - store_artifacts:
+      #     path: ios/test-results
+
+workflows:
+  version: 2.1
+  node-android-ios:
+    jobs:
+      - node
+      - android:
+          requires:
+            - node
+      - ios:
+          requires:
+            - node
