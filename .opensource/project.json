@@ -1,0 +1,7 @@
+{
+  "name": "React Native ACPAnalytics",
+  "type": "library",
+  "platforms": ["Android", "iOS"],
+  "content": "README.md",
+  "pages": ["CONTRIBUTING.md", "CODE_OF_CONDUCT.md"],
+}
