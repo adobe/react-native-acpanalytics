@@ -1,41 +1,41 @@
 version: 2
 jobs:
-  node:
-    working_directory: ~/react-native-acpanalytics
-    docker:
-      - image: circleci/node:8
-    steps:
-      - checkout
-
-      - restore_cache:
-          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
-
-      - save_cache:
-          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
-          paths:
-            - node_modules
-
-      # - run:
-      #     name: jest tests
-      #     command: |
-      #       mkdir -p test-results/jest
-      #       yarn run test
-      #     environment:
-      #       JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
-
-      - persist_to_workspace:
-          root: ~/react-native-acpanalytics
-          paths:
-            - node_modules
-
-      # - store_test_results:
-      #     path: test-results
-      #
-      # - store_artifacts:
-      #     path: test-results
+  # node:
+  #   working_directory: ~/react-native-acpanalytics
+  #   docker:
+  #     - image: circleci/node:8
+  #   steps:
+  #     - checkout
+  #
+  #     - restore_cache:
+  #         key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+  #
+  #     - save_cache:
+  #         key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+  #         paths:
+  #           - node_modules
+  #
+  #     # - run:
+  #     #     name: jest tests
+  #     #     command: |
+  #     #       mkdir -p test-results/jest
+  #     #       yarn run test
+  #     #     environment:
+  #     #       JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
+  #
+  #     - persist_to_workspace:
+  #         root: ~/react-native-acpanalytics
+  #         paths:
+  #           - node_modules
+  #
+  #     # - store_test_results:
+  #     #     path: test-results
+  #     #
+  #     # - store_artifacts:
+  #     #     path: test-results
 
   android:
-    working_directory: ~/react-native-acpanalytics/android
+    # working_directory: ~/react-native-acpanalytics/android
     docker:
       - image: circleci/android:api-27-node8-alpha
     steps:
@@ -138,10 +138,10 @@ workflows:
   version: 2
   node-android-ios:
     jobs:
-      - node
+      # - node
       - android:
-          requires:
-            - node
+          # requires:
+          #   - node
       - ios:
-          requires:
-            - node
+          # requires:
+          #   - node
