@@ -17,14 +17,38 @@ jobs:
     steps:
       - checkout
 
-      # - restore_cache:
-      #     key: node-v1-{{ checksum "package.json" }}-{{ arch }}
-
       - run: npm install
 
-      # - save_cache:
-      #     key: node-v1-{{ checksum "package.json" }}-{{ arch }}
-      #     paths:
+      # restore pods related caches
+      - restore_cache:
+          keys:
+            - cocoapods-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "ios/Podfile.lock" }}
+            - cocoapods-cache-v1-{{ arch }}-{{ .Branch }}
+            - cocoapods-cache-v1
+            - 1-gems-{{ checksum "ios/Gemfile.lock" }}
+
+      # make sure we're on the right version of cocoapods
+      - run:
+          name: Verify Cocoapods Version
+          command: cd ios && bundle check || bundle install --path vendor/bundle
+
+      # save cocoapods version gem data
+      - save_cache:
+          key: 1-gems-{{ checksum "ios/Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+
+      # update CocoaPods
+      - run:
+          name: Update Cocoapods
+          command: (cd ios && bundle exec pod repo update && bundle exec pod update)
+
+      # save pods related files
+      - save_cache:
+          key: cocoapods-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "ios/Podfile.lock" }}
+          paths:
+            - ./Pods
+            - ~/.cocoapods
 
       - run:
           name: Building iOS Project
