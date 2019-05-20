@@ -47,7 +47,7 @@ jobs:
       - save_cache:
           key: cocoapods-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "ios/Podfile.lock" }}
           paths:
-            - ./Pods
+            - ./ios/Pods
             - ~/.cocoapods
 
       - run:
