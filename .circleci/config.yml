@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  android:
+  build-android:
     docker:
       - image: circleci/android:api-28
     steps:
@@ -10,52 +10,52 @@ jobs:
           name: Building Android Project
           command: make build-android
 
-  ios:
+  build-ios:
     macos:
       xcode: "10.0"
 
     steps:
       - checkout
 
-      - restore_cache:
-          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+      # - restore_cache:
+      #     key: node-v1-{{ checksum "package.json" }}-{{ arch }}
 
       - run: npm install
 
-      - save_cache:
-          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
-          paths:
+      # - save_cache:
+      #     key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+      #     paths:
 
       - run:
           name: Building iOS Project
           command: make build-ios
 
-    test:
-      steps:
-        - checkout
-
-        - run: cd sample/ACP*Sample && npm install
-
-        run:
-          name: Copy current build into node_modules
-          command: rm -rf node_modules && cp -r * cd sample/ACP*Sample/node_modules/@adobe/$CIRCLE_PR_REPONAME/ --exclude sample
-
-        run:
-          name: Build Android Test App
-          command: TODO
-
-        run:
-          name: Build iOS Test App
-          command: TODO
-
-        run:
-          name: Run tests
-          command: cd sample/ACP*Sample && jest
+    # test:
+    #   steps:
+    #     - checkout
+    #
+    #     - run: cd sample/ACP*Sample && npm install
+    #
+    #     run:
+    #       name: Copy current build into node_modules
+    #       command: rm -rf node_modules && cp -r * cd sample/ACP*Sample/node_modules/@adobe/$CIRCLE_PR_REPONAME/ --exclude sample
+    #
+    #     run:
+    #       name: Build Android Test App
+    #       command: TODO
+    #
+    #     run:
+    #       name: Build iOS Test App
+    #       command: TODO
+    #
+    #     run:
+    #       name: Run tests
+    #       command: cd sample/ACP*Sample && jest
 
 workflows:
   version: 2
   android-ios:
     jobs:
-      - android
-      - ios
-      - test
+      - build-android
+      - build-ios
+      # - test
