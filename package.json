@@ -38,7 +38,6 @@
     "flow-bin": "^0.92.0",
     "flow-typed": "^2.3.0",
     "jest": "^23.6.0",
-    "jest-cli": "23.6.0",
     "react": "^16.6.3",
     "react-native": "^0.57.3"
   },
