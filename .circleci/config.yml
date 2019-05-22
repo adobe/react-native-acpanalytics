@@ -62,7 +62,6 @@ jobs:
       - checkout
 
       - run: npm install
-      - run: npm install jest-cli@23.6.0
 
       - run:
           name: Unit Tests

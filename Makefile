@@ -16,9 +16,7 @@ build-ios: setup
 	(cd ios && xcodebuild build -workspace RCT${PROJECT_NAME}.xcworkspace -scheme RCT${PROJECT_NAME})
 
 run-tests:
-	pwd
-	ls
-	jest
+	./node_modules/.bin/ jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/
 
 # fetches the latest iOS SDK and put them in the project
 update-ios-lib:
