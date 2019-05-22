@@ -15,6 +15,9 @@ build-android:
 build-ios: setup
 	(cd ios && xcodebuild build -workspace RCT${PROJECT_NAME}.xcworkspace -scheme RCT${PROJECT_NAME})
 
+run-tests:
+	 jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/
+
 # fetches the latest iOS SDK and put them in the project
 update-ios-lib:
 	git clone https://github.com/Adobe-Marketing-Cloud/acp-sdks

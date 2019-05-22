@@ -54,9 +54,23 @@ jobs:
           name: Building iOS Project
           command: make build-ios
 
+  test:
+    macos:
+      xcode: "10.0"
+
+    steps:
+      - checkout
+
+      - run: npm install
+
+      - run:
+          name: Unit Tests
+          command: make run-tests
+
 workflows:
   version: 2
   ci-workflow:
     jobs:
       - build-android
       - build-ios
+      - test
