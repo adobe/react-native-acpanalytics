@@ -55,15 +55,15 @@ jobs:
           command: make build-ios
 
   unit-test:
+    machine:
+      steps:
+        - checkout
 
-    steps:
-      - checkout
+        - run: npm install
 
-      - run: npm install
-
-      - run:
-          name: Unit Tests
-          command: make run-tests
+        - run:
+            name: Unit Tests
+            command: make run-tests
 
 workflows:
   version: 2
