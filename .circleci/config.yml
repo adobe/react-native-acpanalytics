@@ -54,32 +54,9 @@ jobs:
           name: Building iOS Project
           command: make build-ios
 
-    # test:
-    #   steps:
-    #     - checkout
-    #
-    #     - run: cd sample/ACP*Sample && npm install
-    #
-    #     run:
-    #       name: Copy current build into node_modules
-    #       command: rm -rf node_modules && cp -r * cd sample/ACP*Sample/node_modules/@adobe/$CIRCLE_PR_REPONAME/ --exclude sample
-    #
-    #     run:
-    #       name: Build Android Test App
-    #       command: TODO
-    #
-    #     run:
-    #       name: Build iOS Test App
-    #       command: TODO
-    #
-    #     run:
-    #       name: Run tests
-    #       command: cd sample/ACP*Sample && jest
-
 workflows:
   version: 2
-  android-ios:
+  ci-workflow:
     jobs:
       - build-android
       - build-ios
-      # - test

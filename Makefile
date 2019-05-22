@@ -19,4 +19,4 @@ build-ios: setup
 update-ios-lib:
 	git clone https://github.com/Adobe-Marketing-Cloud/acp-sdks
 	cp -a acp-sdks/iOS/${PROJECT_NAME}/ ios/libs/
-	(rm -rf acp-sdks)
+	rm -rf acp-sdks
