@@ -54,15 +54,23 @@ jobs:
           name: Building iOS Project
           command: make build-ios
 
-  build-android-sample:
+
+  prep-sample-app:
     docker:
-      - image: circleci/android:api-28
+      - image: circleci/node:8
     steps:
       - checkout:
 
       - run:
           name: Copy files into Android sample
           command: make copy-to-sample
+
+
+  build-android-sample:
+    docker:
+      - image: circleci/android:api-28
+    steps:
+      - checkout:
 
       - run:
           name: Building Android Sample App
@@ -72,6 +80,7 @@ workflows:
   version: 2
   ci-workflow:
     jobs:
-      - build-android
+      # - build-android
       # - build-ios
+      - prep-sample-app
       - build-android-sample
