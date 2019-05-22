@@ -57,13 +57,12 @@ jobs:
   unit-test:
     macos:
       xcode: "10.0"
-      environment:
-        - NODE_ENV: development
-        
+
     steps:
       - checkout
 
       - run: npm install
+      - run: npm install jest@23.6.0 --save-dev
 
       - run:
           name: Unit Tests
