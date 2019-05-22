@@ -62,7 +62,7 @@ jobs:
       - checkout
 
       - run: npm install
-      - run: npm install jest@23.6.0 -g
+      - run: npm install jest@24.8.0 -g
 
       - run:
           name: Unit Tests
