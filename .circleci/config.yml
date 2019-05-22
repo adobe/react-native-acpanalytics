@@ -65,7 +65,7 @@ jobs:
 
       - run:
           name: Unit Tests
-          command: jest
+          command: make run-tests
 
 workflows:
   version: 2
