@@ -19,6 +19,7 @@ run-tests:
 	jest --v
 	jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/ --runInBand
 
+
 # fetches the latest iOS SDK and put them in the project
 update-ios-lib:
 	git clone https://github.com/Adobe-Marketing-Cloud/acp-sdks
