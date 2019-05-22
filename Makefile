@@ -18,7 +18,7 @@ build-ios: setup
 run-tests:
 	pwd
 	ls
-	jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/
+	jest
 
 # fetches the latest iOS SDK and put them in the project
 update-ios-lib:
