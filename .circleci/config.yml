@@ -73,6 +73,9 @@ jobs:
     macos:
       xcode: "10.0"
 
+    steps:
+      - checkout
+      
       - run:
           name: Install react-native-cli
           command: npm install -g react-native-cli
