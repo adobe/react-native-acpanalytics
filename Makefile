@@ -16,7 +16,7 @@ build-ios: setup
 	(cd ios && xcodebuild build -workspace RCT${PROJECT_NAME}.xcworkspace -scheme RCT${PROJECT_NAME})
 
 build-sample:
-	(cd sample/ACP*Sample/android && gradle build)
+	(cd sample/ACP*Sample/android && ./gradlew assembleRelease)
 	(cd sample/ACP*Sample/ios && xcodebuild build -project ACPCoreSample.xcodeproj -scheme ACPCoreSample)
 
 run-tests:
