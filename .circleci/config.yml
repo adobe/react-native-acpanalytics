@@ -69,22 +69,6 @@ jobs:
           command: make run-tests
 
 
-  setup-sample-app:
-    macos:
-      xcode: "10.0"
-
-    steps:
-      - checkout
-      
-      - run:
-          name: Install react-native-cli
-          command: npm install -g react-native-cli
-
-      - run:
-          name: Copy changes into sample app
-          command: make copy-to-sample
-
-
   build-sample-app-android:
     docker:
       - image: circleci/android:api-28
@@ -104,6 +88,14 @@ jobs:
       - checkout
 
       - run:
+          name: Install react-native-cli
+          command: npm install -g react-native-cli
+
+      - run:
+          name: Copy changes into sample app
+          command: make copy-to-sample
+
+      - run:
           name: Building iOS Sample App
           command: make build-sample-ios
 
@@ -114,10 +106,4 @@ workflows:
       # - build-android
       # - build-ios
       # - unit-test
-      - setup-sample-app
-      - build-sample-app-android:
-          requires:
-            - setup-sample-app
-      - build-sample-app-ios:
-          requires:
-            - setup-sample-app
+      - build-sample-app-ios
