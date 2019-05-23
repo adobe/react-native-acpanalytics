@@ -35,18 +35,6 @@ jobs:
           paths:
             - vendor/bundle
 
-      # # update CocoaPods
-      # - run:
-      #     name: Update Cocoapods
-      #     command: (cd ios && bundle exec pod repo update && bundle exec pod update)
-      #
-      # # save pods related files
-      # - save_cache:
-      #     key: cocoapods-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "ios/Podfile.lock" }}
-      #     paths:
-      #       - ./ios/Pods
-      #       - ~/.cocoapods
-
       - run: mkdir ~/.cocoapods/repos && cd ~/.cocoapods/repos  && git clone --depth 1 https://github.com/CocoaPods/Specs.git master
 
       - run:
@@ -110,8 +98,8 @@ workflows:
   version: 2
   ci-workflow:
     jobs:
-      # - build-android
+      - build-android
       - build-ios
-      # - unit-test
-      # - build-sample-app-android
-      # - build-sample-app-ios
+      - unit-test
+      - build-sample-app-android
+      - build-sample-app-ios
