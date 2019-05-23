@@ -71,9 +71,17 @@ jobs:
 
   build-sample-app-android:
     docker:
-      - image: circleci/android:api-28
+      - image: circleci/android:api-28-node
     steps:
       - checkout
+
+      - run:
+          name: Install react-native-cli
+          command: npm install -g react-native-cli
+
+      - run:
+          name: Copy changes into sample app
+          command: make copy-to-sample
 
       - run:
           name: Building Android Sample App
@@ -106,4 +114,5 @@ workflows:
       # - build-android
       # - build-ios
       # - unit-test
+      - build-sample-app-android
       - build-sample-app-ios
