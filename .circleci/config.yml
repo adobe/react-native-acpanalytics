@@ -47,7 +47,7 @@ jobs:
       #       - ./ios/Pods
       #       - ~/.cocoapods
 
-      - run: cd ~/.cocoapods/repos  && git clone --depth 1 https://github.com/CocoaPods/Specs.git master
+      - run: mkdir ~/.cocoapods/repos && cd ~/.cocoapods/repos  && git clone --depth 1 https://github.com/CocoaPods/Specs.git master
 
       - run:
           name: Building iOS Project
