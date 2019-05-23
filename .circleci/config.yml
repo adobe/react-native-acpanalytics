@@ -76,6 +76,10 @@ jobs:
       - checkout
 
       - run:
+          name: Install react-native-cli
+          command: npm install -g react-native-cli
+
+      - run:
           name: Copy changes into sample app
           command: make copy-to-sample
 
