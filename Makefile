@@ -15,9 +15,15 @@ build-android:
 build-ios: setup
 	(cd ios && xcodebuild build -workspace RCT${PROJECT_NAME}.xcworkspace -scheme RCT${PROJECT_NAME})
 
+build-sample:
+	(cd sample/ACP*Sample/android && gradle build)
+	(cd sample/ACP*Sample/ios && xcodebuild build -project ACPCoreSample.xcodeproj -scheme ACPCoreSample)
+
 run-tests:
 	jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/ --runInBand
 
+copy-to-sample:
+	cd sample/ACP*Sample/ && sh copy-changes-to-sample.sh
 
 # fetches the latest iOS SDK and put them in the project
 update-ios-lib:

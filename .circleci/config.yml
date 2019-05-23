@@ -68,10 +68,26 @@ jobs:
           name: Unit Tests
           command: make run-tests
 
+  build-sample-app:
+    macos:
+      xcode: "10.0"
+
+    steps:
+      - checkout
+
+      - run:
+          name: Copy changes into sample app
+          command: make copy-to-sample
+
+      - run:
+          name: Build sample app
+          command: make build-sample
+
 workflows:
   version: 2
   ci-workflow:
     jobs:
-      - build-android
-      - build-ios
-      - unit-test
+      # - build-android
+      # - build-ios
+      # - unit-test
+      - build-sample-app
