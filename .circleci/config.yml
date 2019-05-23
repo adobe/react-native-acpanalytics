@@ -88,7 +88,8 @@ jobs:
             HOMEBREW_NO_AUTO_UPDATE=1 brew tap homebrew/cask
             HOMEBREW_NO_AUTO_UPDATE=1 brew cask install android-sdk
 
-      - run: yes | sdkmanager --licenses && yes | sdkmanager --update
+      - run: yes | sdkmanager --licenses
+      - run: yes | sdkmanager --update || exit 0
 
       - run:
           name: Install react-native-cli
