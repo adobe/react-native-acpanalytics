@@ -77,7 +77,7 @@ jobs:
 
       - run:
           name: Install react-native-cli
-          command: npm install -g react-native-cli
+          command: npm install react-native-cli
 
       - run:
           name: Copy changes into sample app
@@ -115,4 +115,4 @@ workflows:
       # - build-ios
       # - unit-test
       - build-sample-app-android
-      - build-sample-app-ios
+      # - build-sample-app-ios
