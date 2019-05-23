@@ -71,25 +71,27 @@ jobs:
   build-sample-app:
     macos:
       xcode: "10.0"
+    docker:
+      - image: circleci/android:api-28
 
     steps:
       - checkout
 
-      - run:
-          name: Setup environment variables
-          command: |
-            echo 'export ANDROID_HOME="/usr/local/share/android-sdk"' >> $BASH_ENV
-            echo 'export ANDROID_SDK_HOME="/usr/local/share/android-sdk"' >> $BASH_ENV
-            echo 'export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"' >> $BASH_ENV
-            echo 'export JAVA_HOME=/Library/Java/Home' >> $BASH_ENV
-      - run:
-          name: Install Android sdk
-          command: |
-            HOMEBREW_NO_AUTO_UPDATE=1 brew tap homebrew/cask
-            HOMEBREW_NO_AUTO_UPDATE=1 brew cask install android-sdk
 
-      - run: yes | sdkmanager --licenses
-      - run: yes | sdkmanager --update || exit 0
+      # - run:
+      #     name: Setup environment variables
+      #     command: |
+      #       echo 'export ANDROID_HOME="/usr/local/share/android-sdk"' >> $BASH_ENV
+      #       echo 'export ANDROID_SDK_HOME="/usr/local/share/android-sdk"' >> $BASH_ENV
+      #       echo 'export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"' >> $BASH_ENV
+      #       echo 'export JAVA_HOME=/Library/Java/Home' >> $BASH_ENV
+      # - run:
+      #     name: Install Android sdk
+      #     command: |
+      #       HOMEBREW_NO_AUTO_UPDATE=1 brew tap homebrew/cask
+      #       HOMEBREW_NO_AUTO_UPDATE=1 brew cask install android-sdk
+      #
+      # - run: yes | sdkmanager --licenses && y | sdkmanager --update
 
       - run:
           name: Install react-native-cli
