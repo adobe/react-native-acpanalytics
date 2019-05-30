@@ -1,3 +1,3 @@
 # Setup
 
-In the root directory of the wrapper run `npm install react-native`. Run `pod install`, then open the workspace.
+`npm install && cd ios && pod install`
