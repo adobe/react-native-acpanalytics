@@ -26,6 +26,7 @@ react-native init MyReactApp
 Install and link the `@adobe/react-native-acpanalytics` package:
 
 ```bash
+cd MyReactApp
 npm install @adobe/react-native-acpanalytics
 react-native link @adobe/react-native-acpanalytics
 ```
