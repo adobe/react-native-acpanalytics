@@ -116,9 +116,9 @@ workflows:
   version: 2
   ci-workflow:
     jobs:
-      # - build-android
-      # - build-ios
-      # - javascript-unit-test
+      - build-android
+      - build-ios
+      - javascript-unit-test
       - ios-unit-test
-      # - build-sample-app-android
-      # - build-sample-app-ios
+      - build-sample-app-android
+      - build-sample-app-ios
