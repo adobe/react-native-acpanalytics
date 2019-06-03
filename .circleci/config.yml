@@ -37,6 +37,8 @@ jobs:
 
       - run: mkdir ~/.cocoapods/repos && cd ~/.cocoapods/repos  && git clone --depth 1 https://github.com/CocoaPods/Specs.git master
 
+      - run: pod deintegrate
+      
       - run:
           name: Building iOS Project
           command: make build-ios
