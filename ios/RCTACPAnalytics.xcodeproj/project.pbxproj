@@ -103,15 +103,7 @@
 				21E5E05A22A539550059839B /* RCTACPAnalyticsTests */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				21E5E05922A539550059839B /* RCTACPAnalyticsTests.xctest */,
-				5DE057BD1E04406EE4860A5A /* Pods */,
 			);
-			sourceTree = "<group>";
-		};
-		5DE057BD1E04406EE4860A5A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
