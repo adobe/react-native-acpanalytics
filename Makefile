@@ -28,7 +28,7 @@ run-tests-locally: setup
 	./node_modules/.bin/jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/
 
 run-tests-ios:
-	(cd ios && xcodebuild test -workspace RCT${PROJECT_NAME}.xcworkspace -scheme RCT${PROJECT_NAME} -destination 'platform=iOS Simulator,name=iPhone 8 XS,OS=11.2')
+	(cd ios && xcodebuild test -workspace RCT${PROJECT_NAME}.xcworkspace -scheme RCT${PROJECT_NAME} -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.2')
 
 copy-to-sample:
 	cd sample/ACP*Sample/ && sh copy-changes-to-sample.sh
