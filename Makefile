@@ -23,6 +23,9 @@ build-sample-ios:
 
 run-tests-javascript:
 	jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/ --runInBand
+	
+run-tests-locally: setup
+	./node_modules/.bin/jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/
 
 run-tests-ios:
 	(cd ios && xcodebuild test -workspace RCT${PROJECT_NAME}.xcworkspace -scheme RCT${PROJECT_NAME} -destination 'platform=iOS Simulator,name=iPhone X')

@@ -31,6 +31,12 @@ npm install @adobe/react-native-acpanalytics
 react-native link @adobe/react-native-acpanalytics
 ```
 
+## Tests
+This project contains jest unit tests which are contained in the `__tests__` directory, to run the tests locally:
+```
+make run-tests-locally
+```
+
 ## Usage
 
 ### [Analytics](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics)

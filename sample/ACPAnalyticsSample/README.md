@@ -1,5 +1,9 @@
 # ACPAnalyticsSample
 
+> Note: Commands are assuming you're in the root directory of the repository.
+
+> Note: If you are new to React Native we suggest you follow the [React Native Getting Started](<https://facebook.github.io/react-native/docs/getting-started.html>) page before continuing.
+
 How to run the sample app:
 
 #### Run instructions for iOS:
@@ -7,11 +11,14 @@ How to run the sample app:
 ```
 cd sample/ACPAnalyticsSample/ && npm install && react-native run-ios
 ```
+
+> Note: If you see an error "Can't find simulator for "iPhoneX"", this is a known [issue](https://github.com/facebook/react-native/issues/23256) with React Native and you should try running the sample app inside of Xcode.
+
 or
-
-Open the Xcode project
-
-Hit the Run button
+```
+cd sample/ACPAnalyticsSample/ && npm install
+```
+Then, open the Xcode project under the `ios` directory and hit run.
 
 #### Run instructions for Android:
 
@@ -27,5 +34,6 @@ If you're having issues running the sample app, ensure you can at least run a de
 
 ```
 react-native init MyReactApp
+cd MyReactApp
 react-native run-ios or react-native run-android
 ```
