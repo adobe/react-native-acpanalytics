@@ -18,3 +18,24 @@ target 'RCTACPAnalytics' do
   pod "yoga", :path => "#{react_native_path}/ReactCommon/yoga"
   pod 'Folly', :podspec => "#{react_native_path}/third-party-podspecs/Folly.podspec"
 end
+
+
+target 'RCTACPAnalyticsTests' do
+  # inherit! :search_paths
+  # Pods for testing
+  pod 'ACPCore'
+  pod 'OCMock'
+  react_native_path = "../node_modules/react-native"
+  pod 'React', :path => "#{react_native_path}", :subspecs => [
+    'Core',
+    'CxxBridge',
+    'DevSupport',
+    'RCTText',
+    'RCTNetwork',
+    'RCTImage',
+    'RCTWebSocket',
+  ]
+
+  pod "yoga", :path => "#{react_native_path}/ReactCommon/yoga"
+  pod 'Folly', :podspec => "#{react_native_path}/third-party-podspecs/Folly.podspec"
+end

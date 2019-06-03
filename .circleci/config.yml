@@ -41,7 +41,7 @@ jobs:
           name: Building iOS Project
           command: make build-ios
 
-  unit-test:
+  javascript-unit-test:
     macos:
       xcode: "10.0"
 
@@ -53,7 +53,21 @@ jobs:
 
       - run:
           name: Unit Tests
-          command: make run-tests
+          command: make run-tests-javascript
+
+  ios-unit-test:
+    macos:
+      xcode: "10.0"
+
+    steps:
+      - checkout
+
+      - run: npm install
+      - run: make setup
+
+      - run:
+          name: Unit Tests
+          command: make run-tests-ios
 
 
   build-sample-app-android:
@@ -100,6 +114,6 @@ workflows:
     jobs:
       - build-android
       - build-ios
-      - unit-test
+      - javascript-unit-test
       - build-sample-app-android
       - build-sample-app-ios

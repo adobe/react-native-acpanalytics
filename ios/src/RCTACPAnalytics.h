@@ -18,4 +18,20 @@ governing permissions and limitations under the License.
 
 @interface RCTACPAnalytics : NSObject <RCTBridgeModule>
 
+- (void) extensionVersion: (RCTPromiseResolveBlock _Nonnull) resolve rejecter:(RCTPromiseRejectBlock _Nullable)reject;
+
+- (void) registerExtension;
+
+- (void) getTrackingIdentifier: (RCTPromiseResolveBlock _Nonnull) resolve rejecter:(RCTPromiseRejectBlock _Nullable)reject;
+
+- (void) getQueueSize: (RCTPromiseResolveBlock _Nonnull) resolve rejecter:(RCTPromiseRejectBlock _Nullable)reject;
+
+- (void) clearQueue;
+
+- (void)sendQueuedHits;
+
+- (void) getVisitorIdentifier: (RCTPromiseResolveBlock _Nonnull) resolve rejecter:(RCTPromiseRejectBlock _Nullable)reject;
+
+- (void) setVisitorIdentifier: (nullable NSString*) visitorIdentifier;
+
 @end

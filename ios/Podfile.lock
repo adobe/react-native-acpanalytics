@@ -1,4 +1,7 @@
 PODS:
+  - ACPCore (2.3.0):
+    - ACPCore/iOS (= 2.3.0)
+  - ACPCore/iOS (2.3.0)
   - boost-for-react-native (1.63.0)
   - DoubleConversion (1.1.5)
   - Folly (2016.10.31.00):
@@ -6,6 +9,7 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.4)
+  - OCMock (3.4.3)
   - React/Core (0.57.8):
     - yoga (= 0.57.8.React)
   - React/CxxBridge (0.57.8):
@@ -42,7 +46,9 @@ PODS:
   - yoga (0.57.8.React)
 
 DEPENDENCIES:
+  - ACPCore
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
+  - OCMock
   - React/Core (from `../node_modules/react-native`)
   - React/CxxBridge (from `../node_modules/react-native`)
   - React/DevSupport (from `../node_modules/react-native`)
@@ -54,9 +60,11 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ACPCore
     - boost-for-react-native
     - DoubleConversion
     - glog
+    - OCMock
 
 EXTERNAL SOURCES:
   Folly:
@@ -67,13 +75,15 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  ACPCore: 32d3633645e2d7c8c8d68e44fb43bf73365eb9ed
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: e22e0762848812a87afd67ffda3998d9ef29170c
   Folly: c89ac2d5c6ab169cd7397ef27485c44f35f742c7
   glog: 1de0bb937dccdc981596d3b5825ebfb765017ded
+  OCMock: 43565190abc78977ad44a61c0d20d7f0784d35ab
   React: adbac0757ce35e92fbd447ab98c810209d27d9b0
   yoga: 74cdf036c30820443b25ade59916236b1e95ee93
 
-PODFILE CHECKSUM: 9bc162e3997eba9d2c175f53e7f43177bc0cae13
+PODFILE CHECKSUM: 311214895e7b09bf47814840fb1c60c2c9a81e4f
 
 COCOAPODS: 1.6.0

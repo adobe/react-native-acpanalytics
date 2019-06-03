@@ -21,8 +21,11 @@ build-sample-android:
 build-sample-ios:
 	(cd sample/ACP*Sample/ios && xcodebuild build -project ACPCoreSample.xcodeproj -scheme ACPCoreSample CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED="NO" CODE_SIGNING_ALLOWED="NO")
 
-run-tests:
+run-tests-javascript:
 	jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/ --runInBand
+
+run-tests-ios:
+	(cd ios && xcodebuild test -workspace RCT${PROJECT_NAME}.xcworkspace -scheme RCT${PROJECT_NAME} -destination 'platform=iOS Simulator,name=iPhone X')
 
 copy-to-sample:
 	cd sample/ACP*Sample/ && sh copy-changes-to-sample.sh
