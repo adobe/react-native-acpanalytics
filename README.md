@@ -32,10 +32,14 @@ react-native link @adobe/react-native-acpanalytics
 ```
 
 ## Tests
-This project contains jest unit tests which are contained in the `__tests__` directory, to run the tests locally:
+#### Javascript
+This project contains jest Javascript unit tests which are contained in the `__tests__` directory, to run the tests locally:
 ```
 make run-tests-locally
 ```
+
+#### iOS
+Run `make setup`, then open the Xcode project under the `ios` directory and go to "Product -> Test"
 
 ## Usage
 

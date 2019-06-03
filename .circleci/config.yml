@@ -96,6 +96,8 @@ jobs:
     steps:
       - checkout
 
+      - run: cd ios && pod deintegrate
+
       - run:
           name: Install react-native-cli
           command: npm install -g react-native-cli
@@ -115,5 +117,6 @@ workflows:
       - build-android
       - build-ios
       - javascript-unit-test
+      - ios-unit-test
       - build-sample-app-android
       - build-sample-app-ios
