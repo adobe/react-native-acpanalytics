@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		215A61FC226E144900FA8FC6 /* ACPAnalytics.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2184F944222729F5005C3F03 /* ACPAnalytics.h */; };
-		215A61FE226E145300FA8FC6 /* ACPAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 2184F944222729F5005C3F03 /* ACPAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2184F942222729BB005C3F03 /* libACPAnalytics_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2184F941222729BB005C3F03 /* libACPAnalytics_iOS.a */; };
 		B3E7B58A1CC2AC0600A0062D /* RCTACPAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RCTACPAnalytics.m */; };
 /* End PBXBuildFile section */
@@ -84,23 +83,11 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		215A61FD226E144D00FA8FC6 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				215A61FE226E145300FA8FC6 /* ACPAnalytics.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		58B511DA1A9E6C8500147676 /* RCTACPAnalytics */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RCTACPAnalytics" */;
 			buildPhases = (
-				215A61FD226E144D00FA8FC6 /* Headers */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -133,6 +120,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
