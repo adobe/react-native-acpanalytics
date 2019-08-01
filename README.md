@@ -31,6 +31,11 @@ npm install @adobe/react-native-acpanalytics
 react-native link @adobe/react-native-acpanalytics
 ```
 
+We also support Cocoapods:
+
+* Add `pod 'RCTACPAnalytics', :path => '../node_modules/@adobe/react-native-acpanalytics'` to your `ios/Podfile`
+* Run `pod install` on `/ios`
+
 ## Tests
 This project contains jest unit tests which are contained in the `__tests__` directory, to run the tests locally:
 ```
