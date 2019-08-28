@@ -17,8 +17,8 @@
     "flow-bin": "^0.92.0",
     "react": "16.6.3",
     "react-native": "0.58.3",
-    "@adobe/react-native-acpcore": "^1.0.2",
-    "@adobe/react-native-acpanalytics": "^1.0.1"
+    "@adobe/react-native-acpcore": "^1.0.8",
+    "@adobe/react-native-acpanalytics": "^1.0.3"
   },
   "devDependencies": {
     "babel-jest": "16.0.0",
