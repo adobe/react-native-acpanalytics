@@ -28,7 +28,26 @@ Install and link the `@adobe/react-native-acpanalytics` package:
 ```bash
 cd MyReactApp
 npm install @adobe/react-native-acpanalytics
-react-native link @adobe/react-native-acpanalytics
+```
+
+#### 2.1 Link
+- **React Native 0.60+**
+
+
+[CLI autolink feature](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) links the module while building the app.
+
+
+- **React Native <= 0.59**
+
+
+```bash
+$ react-native link react-native-acpanalytics
+```
+
+*Note* For `iOS` using `cocoapods`, run:
+
+```bash
+$ cd ios/ && pod install
 ```
 
 ## Tests
