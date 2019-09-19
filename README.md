@@ -77,48 +77,48 @@ ACPAnalytics.extensionVersion().then(version => console.log("AdobeExperienceSDK:
 ACPAnalytics.registerExtension();
 ```
 
-##### Get the tracking identifier
+##### Get the tracking identifier:
 
 ```javascript
 ACPAnalytics.getTrackingIdentifier().then(identifier => console.log("AdobeExperienceSDK: Tracking identifier: " + identifier));
 ```
-##### Send queued hits
+##### Send queued hits:
 
 ```javascript
 ACPAnalytics.sendQueuedHits();
 ```
 
-##### Get the queue size
+##### Get the queue size:
 
 ```javascript
 ACPAnalytics.getQueueSize().then(size => console.log("AdobeExperienceSDK: Queue size: " + size));
 ```
 
-##### Clear queued hits
+##### Clear queued hits:
 
 ```javascript
 ACPAnalytics.clearQueue();
 ```
 
-##### Set the custom visitor identifier
+##### Set the custom visitor identifier:
 
 ```javascript
 ACPAnalytics.setVisitorIdentifier("yourVisitorId");
 ```
 
-##### Get the custom visitor identifier
+##### Get the custom visitor identifier:
 
 ```javascript
 ACPAnalytics.getVisitorIdentifier().then(vid => console.log("AdobeExperienceSDK: Visitor identifier: " + vid));
 ```
 
-##### Track app actions
+##### Track app actions:
 
 ```javascript
 ACPCore.trackAction("action", {"mytest": "action"});
 ```
 
-##### Track app states
+##### Track app states:
 
 ```javascript
 ACPCore.trackState("state", {"mytest": "state"});
