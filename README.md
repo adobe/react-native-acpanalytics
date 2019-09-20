@@ -73,6 +73,22 @@ ACPAnalytics.extensionVersion().then(version => console.log("AdobeExperienceSDK:
 
 ##### Registering the extension with ACPCore:
 
+> Note: It is recommended to initialize the SDK via native code inside your AppDelegate and MainApplication in iOS and Android respectively. However, you can still initialize the SDK in Javascript. For more information see how to initialize [Core](https://github.com/adobe/react-native-acpcore#initializing-the-sdk). 
+
+##### **iOS**
+```objective-c
+#import <RCTACPAnalytics/ACPAnalytics.h>
+
+[ACPAnalytics registerExtension];
+```
+
+##### **Android:**
+```java
+import com.adobe.marketing.mobile.Analytics;
+
+Analytics.registerExtension();
+```
+
 ```javascript
 ACPAnalytics.registerExtension();
 ```
