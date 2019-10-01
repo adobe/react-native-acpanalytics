@@ -41,7 +41,7 @@ npm install @adobe/react-native-acpanalytics
 
 
 ```bash
-$ react-native link react-native-acpanalytics
+$ react-native link @adobe/react-native-acpanalytics
 ```
 
 *Note* For `iOS` using `cocoapods`, run:
