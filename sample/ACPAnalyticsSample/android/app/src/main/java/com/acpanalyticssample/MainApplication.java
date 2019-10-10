@@ -12,6 +12,7 @@ package com.acpanalyticssample;
 
 import android.app.Application;
 
+import com.adobe.marketing.mobile.LoggingMode;
 import com.facebook.react.ReactApplication;
 import com.adobe.marketing.mobile.reactnative.analytics.RCTACPAnalyticsPackage;
 import com.adobe.marketing.mobile.reactnative.RCTACPCorePackage;
@@ -62,6 +63,7 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     MobileCore.setApplication(this); // add this line
+    MobileCore.setLogLevel(LoggingMode.VERBOSE);
     MobileCore.configureWithAppID("yourAppId");
     MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
     
