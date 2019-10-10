@@ -12,7 +12,6 @@ package com.acpanalyticssample;
 
 import android.app.Application;
 
-import com.adobe.marketing.mobile.LoggingMode;
 import com.facebook.react.ReactApplication;
 import com.adobe.marketing.mobile.reactnative.analytics.RCTACPAnalyticsPackage;
 import com.adobe.marketing.mobile.reactnative.RCTACPCorePackage;
@@ -26,6 +25,7 @@ import com.adobe.marketing.mobile.Lifecycle;
 import com.adobe.marketing.mobile.Signal;
 import com.adobe.marketing.mobile.Analytics;
 import com.adobe.marketing.mobile.WrapperType;
+import com.adobe.marketing.mobile.LoggingMode;
 
 import java.util.Arrays;
 import java.util.List;
