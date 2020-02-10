@@ -89,7 +89,10 @@ import com.adobe.marketing.mobile.Analytics;
 Analytics.registerExtension();
 ```
 
+##### **Javascript:**
 ```javascript
+import {ACPAnalytics} from '@adobe/react-native-acpanalytics';
+
 ACPAnalytics.registerExtension();
 ```
 
