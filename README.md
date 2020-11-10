@@ -1,8 +1,10 @@
 
 # React Native AEP Analytics Extension
 
-[![npm version](https://badge.fury.io/js/%40adobe%2Freact-native-acpanalytics.svg)](https://badge.fury.io/js/%40adobe%2Freact-native-acpanalytics) ![npm](https://img.shields.io/npm/dm/@adobe/react-native-acpanalytics) [![CircleCI](https://img.shields.io/circleci/project/github/adobe/react-native-acpanalytics/master.svg?logo=circleci)](https://circleci.com/gh/adobe/workflows/react-native-acpanalytics) ![NPM](https://img.shields.io/npm/l/@adobe/react-native-acpanalytics.svg)
-
+[![npm version](https://badge.fury.io/js/%40adobe%2Freact-native-acpanalytics.svg)](https://www.npmjs.com/package/@adobe/react-native-acpanalytics) 
+[![npm downloads](https://img.shields.io/npm/dm/@adobe/react-native-acpanalytics)](https://www.npmjs.com/package/@adobe/react-native-acpanalytics)
+[![CircleCI](https://img.shields.io/circleci/project/github/adobe/react-native-acpanalytics/main.svg?logo=circleci)](https://circleci.com/gh/adobe/workflows/react-native-acpanalytics) 
+[![license](https://img.shields.io/npm/l/@adobe/react-native-acpanalytics.svg)](https://github.com/adobe/react-native-acpanalytics/blob/main/LICENSE)
 
 `@adobe/react-native-acpanalytics` is a wrapper around the iOS and Android [AEP Analytics SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics) to allow for integration with React Native applications. Functionality to enable Adobe Analytics is provided entirely through JavaScript documented below.
 
