@@ -6,11 +6,11 @@
   "license": "Apache-2.0",
   "main": "./js/index.js",
   "scripts": {
-    "flow": "flow",
-    "prepublishOnly": "cd ios && pod deintegrate"
+    "flow": "flow"
   },
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/adobe/react-native-acpanalytics"
   },
   "keywords": [
     "react-native",
