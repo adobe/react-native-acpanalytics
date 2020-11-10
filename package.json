@@ -10,8 +10,7 @@
     "prepublishOnly": "cd ios && pod deintegrate"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/react-native-acpanalytics"
+    "type": "git"
   },
   "keywords": [
     "react-native",
