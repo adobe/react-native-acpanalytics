@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/adobe/react-native-acpanalytics"
 
   s.license      = "Apache 2.0 License"
-  s.platform      = :ios, '10.0'
+  s.platforms    = { :ios => "10.0", :tvos => "10.0" }
 
   s.source       = { :git => "https://github.com/adobe/react-native-acpanalytics.git", :tag => "#{s.version}" }
 
@@ -18,7 +18,11 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency "React"
-  s.frameworks = 'UIKit', 'SystemConfiguration', 'WebKit', 'UserNotifications'
-  s.library = 'sqlite3.0', 'c++', 'z'
-  s.vendored_libraries = 'ios/libs/libACPAnalytics_iOS.a'
-end
+  s.ios.vendored_libraries = 'ios/libs/libACPAnalytics_iOS.a'
+  s.ios.frameworks = 'UIKit', 'SystemConfiguration', 'WebKit', 'UserNotifications'
+  s.ios.library = 'sqlite3.0', 'c++', 'z'
+  
+  s.tvos.vendored_libraries = 'ios/libs/tvos/libACPAnalytics_tvOS.a'
+  s.tvos.frameworks = 'SystemConfiguration'
+  s.tvos.library = 'sqlite3.0', 'c++', 'z'  
+end  
