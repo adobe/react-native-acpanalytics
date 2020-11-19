@@ -6,7 +6,7 @@
 [![CircleCI](https://img.shields.io/circleci/project/github/adobe/react-native-acpanalytics/main.svg?logo=circleci)](https://circleci.com/gh/adobe/workflows/react-native-acpanalytics) 
 [![license](https://img.shields.io/npm/l/@adobe/react-native-acpanalytics.svg)](https://github.com/adobe/react-native-acpanalytics/blob/main/LICENSE)
 
-`@adobe/react-native-acpanalytics` is a wrapper around the iOS and Android [AEP Analytics SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics) to allow for integration with React Native applications. Functionality to enable Adobe Analytics is provided entirely through JavaScript documented below.
+`@adobe/react-native-acpanalytics` is a wrapper around the iOS, tvOS and Android [AEP Analytics SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics) to allow for integration with React Native applications. Functionality to enable Adobe Analytics is provided entirely through JavaScript documented below.
 
 
 ## Installation
@@ -22,6 +22,7 @@ First create a React Native project:
 ```bash
 react-native init MyReactApp
 ```
+> Note: Follow [React Native tvos support](https://reactnative.dev/blog/2020/03/26/version-0.62#moving-apple-tv-to-react-native-tvos) to create app with tvos target.
 
 ### 2. Install JavaScript packages
 
