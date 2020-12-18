@@ -18,11 +18,11 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency "React"
-  s.ios.vendored_libraries = 'ios/libs/libACPAnalytics_iOS.a'
+  s.ios.vendored_libraries = 'ios/libs/ACPAnalytics.xcframework'
   s.ios.frameworks = 'UIKit', 'SystemConfiguration', 'WebKit', 'UserNotifications'
   s.ios.library = 'sqlite3.0', 'c++', 'z'
-  
-  s.tvos.vendored_libraries = 'ios/libs/tvos/libACPAnalytics_tvOS.a'
+
+  s.tvos.vendored_libraries = 'ios/libs/ACPAnalyticsTV.xcframework'
   s.tvos.frameworks = 'SystemConfiguration'
-  s.tvos.library = 'sqlite3.0', 'c++', 'z'  
-end  
+  s.tvos.library = 'sqlite3.0', 'c++', 'z'
+end
