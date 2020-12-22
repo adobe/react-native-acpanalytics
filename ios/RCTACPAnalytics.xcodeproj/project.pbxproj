@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		215A61FC226E144900FA8FC6 /* ACPAnalytics.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2184F944222729F5005C3F03 /* ACPAnalytics.h */; };
-		2184F942222729BB005C3F03 /* libACPAnalytics_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2184F941222729BB005C3F03 /* libACPAnalytics_iOS.a */; };
+		21A869A9258D632000F171F0 /* ACPAnalytics.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A869A7258D632000F171F0 /* ACPAnalytics.xcframework */; };
+		21A869AD258D633000F171F0 /* ACPAnalytics.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A869AC258D632D00F171F0 /* ACPAnalytics.h */; };
 		B3E7B58A1CC2AC0600A0062D /* RCTACPAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RCTACPAnalytics.m */; };
 /* End PBXBuildFile section */
 
@@ -19,7 +19,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				215A61FC226E144900FA8FC6 /* ACPAnalytics.h in CopyFiles */,
+				21A869AD258D633000F171F0 /* ACPAnalytics.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -27,8 +27,9 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRCTACPAnalytics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTACPAnalytics.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2184F941222729BB005C3F03 /* libACPAnalytics_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libACPAnalytics_iOS.a; sourceTree = "<group>"; };
-		2184F944222729F5005C3F03 /* ACPAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPAnalytics.h; sourceTree = "<group>"; };
+		21A869A6258D631F00F171F0 /* ACPAnalyticsTV.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ACPAnalyticsTV.xcframework; sourceTree = "<group>"; };
+		21A869A7258D632000F171F0 /* ACPAnalytics.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ACPAnalytics.xcframework; sourceTree = "<group>"; };
+		21A869AC258D632D00F171F0 /* ACPAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPAnalytics.h; path = "ACPAnalytics.xcframework/ios-arm64_armv7_armv7s/Headers/ACPAnalytics.h"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RCTACPAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTACPAnalytics.h; path = src/RCTACPAnalytics.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RCTACPAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTACPAnalytics.m; path = src/RCTACPAnalytics.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2184F942222729BB005C3F03 /* libACPAnalytics_iOS.a in Frameworks */,
+				21A869A9258D632000F171F0 /* ACPAnalytics.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,19 +57,12 @@
 		2184F940222728E2005C3F03 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				2184F943222729BE005C3F03 /* include */,
-				2184F941222729BB005C3F03 /* libACPAnalytics_iOS.a */,
+				21A869AC258D632D00F171F0 /* ACPAnalytics.h */,
+				21A869A7258D632000F171F0 /* ACPAnalytics.xcframework */,
+				21A869A6258D631F00F171F0 /* ACPAnalyticsTV.xcframework */,
 			);
 			name = Libs;
 			path = libs;
-			sourceTree = "<group>";
-		};
-		2184F943222729BE005C3F03 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				2184F944222729F5005C3F03 /* ACPAnalytics.h */,
-			);
-			path = include;
 			sourceTree = "<group>";
 		};
 		58B511D21A9E6C8500147676 = {
@@ -78,7 +72,15 @@
 				B3E7B5891CC2AC0600A0062D /* RCTACPAnalytics.m */,
 				2184F940222728E2005C3F03 /* Libs */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				68A7BD817F1A04343EF5EC6E /* Pods */,
 			);
+			sourceTree = "<group>";
+		};
+		68A7BD817F1A04343EF5EC6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,9 +90,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RCTACPAnalytics" */;
 			buildPhases = (
+				58B511D91A9E6C8500147676 /* CopyFiles */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
-				58B511D91A9E6C8500147676 /* CopyFiles */,
 			);
 			buildRules = (
 			);
