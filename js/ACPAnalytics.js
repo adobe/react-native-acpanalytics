@@ -27,13 +27,6 @@ module.exports = {
   },
 
   /**
-   * Registers the ACPAnalytics extension with ACPCore
-   */
-  registerExtension() {
-    RCTACPAnalytics.registerExtension();
-  },
-
-  /**
    *  @brief Retrieves the analytics tracking identifier.
    *
    *  @param callback invoked with the analytics identifier value
