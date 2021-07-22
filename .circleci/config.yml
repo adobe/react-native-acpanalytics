@@ -26,8 +26,8 @@ jobs:
 
       # make sure we're on the right version of cocoapods
        - run:
-           name: Install latest Cocoapods
-           command: sudo gem install cocoapods
+          name: Install latest Cocoapods
+          command: sudo gem install cocoapods
 
       - run:
           name: Verify Cocoapods Version
