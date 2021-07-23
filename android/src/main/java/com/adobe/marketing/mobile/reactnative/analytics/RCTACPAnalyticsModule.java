@@ -42,15 +42,6 @@ public class RCTACPAnalyticsModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void registerExtension() {
-        try {
-            Analytics.registerExtension();
-        } catch (InvalidInitException e) {
-            Log.d(getName(), "Registering Analytics extension failed with error: " + e.getMessage());
-        }
-    }
-
-    @ReactMethod
     public void getTrackingIdentifier(final Promise promise) {
         Analytics.getTrackingIdentifier(new AdobeCallback<String>() {
             @Override
