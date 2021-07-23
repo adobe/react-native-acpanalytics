@@ -25,7 +25,7 @@ jobs:
             - 1-gems-{{ checksum "ios/Gemfile.lock" }}
 
       # make sure we're on the right version of cocoapods
-       - run:
+      - run:
           name: Install latest Cocoapods
           command: sudo gem install cocoapods
 
