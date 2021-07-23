@@ -91,7 +91,7 @@ jobs:
           name: Install react-native-cli
           command: npm install -g react-native-cli
 
-       - run:
+      - run:
           name: Install latest Cocoapods
           command: sudo gem install cocoapods
 
