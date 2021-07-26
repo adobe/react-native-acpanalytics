@@ -22,17 +22,17 @@ android {
         versionName "1.0"
     }
     lintOptions {
+        checkReleaseBuilds false
         abortOnError false
     }
 }
 
 repositories {
     google()
-    jcenter()
     mavenCentral()
 }
 
 dependencies {
     implementation "com.facebook.react:react-native:+"
-    api "com.adobe.marketing.mobile:analytics:1.2.8"
+    api "com.adobe.marketing.mobile:analytics:1+"
 }
