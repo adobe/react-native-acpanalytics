@@ -21,7 +21,7 @@ cd sample/ACPAnalyticsSampleApp && npm install && cd ios/ && pod update && cd ..
 
 or
 ```
-cd sample/ACPAnalyticsSampleApp/ && npm install
+cd sample/ACPAnalyticsSampleApp/ && npm install && cd ios/ && pod update
 ```
 Then, open the Xcode project under the `ios` directory and hit run.
 
