@@ -9,7 +9,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-package com.acpanalyticssampleapp;
+package com.acpanalyticstvapp;
 
 import android.app.Application;
 import android.content.Context;
@@ -95,7 +95,7 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.acpanalyticssampleapp.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.acpanalyticstvapp.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);

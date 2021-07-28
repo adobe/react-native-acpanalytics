@@ -11,26 +11,24 @@ In `ios/**/AppDelegate.m`, find the call to `configureWithAppId` and add your ap
 
 In `android/**/MainApplication.java`, find the call to `configureWithAppId` and add your app id.
 
-#### Run instructions for iOS:
+#### Run instructions for TVOS:
 
 ```
-cd sample/ACPAnalyticsSampleApp && npm install && cd ios/ && pod update && cd .. && react-native run-ios
+cd sample/ACPAnalyticsTVapp/ && npm install && cd ios/ && pod update && cd .. && npx react-native run-ios  --simulator "Apple TV" --scheme "ACPAnalyticsTVapp-tvOS"
 ```
-
-> Note: If you see an error "Can't find simulator for "iPhoneX"", this is a known [issue](https://github.com/facebook/react-native/issues/23256) with React Native and you should try running the sample app inside of Xcode.
 
 or
 ```
-cd sample/ACPAnalyticsSampleApp/ && npm install
+cd sample/ACPAnalyticsTVapp/ && npm install && cd ios/ && pod update
 ```
-Then, open the Xcode project under the `ios` directory and hit run.
+Then, open the ACPAnalyticsTVapp.xcworkspace project under the `ios` directory and hit run.
 
 #### Run instructions for Android:
 
 Have an Android emulator running (quickest way to get started), or a device connected. https://developer.android.com/studio/run/emulator-commandline
 
 ```
-cd sample/ACPAnalyticsSampleApp/ && npm install && react-native run-android
+cd sample/ACPAnalyticsTVApp/ && npm install && react-native run-android
 ```
 
 ### Troubleshooting

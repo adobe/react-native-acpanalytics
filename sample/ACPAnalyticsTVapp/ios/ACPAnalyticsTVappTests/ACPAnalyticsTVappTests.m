@@ -9,6 +9,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
@@ -18,11 +19,11 @@ governing permissions and limitations under the License.
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface ACPAnalyticsSampleAppTests : XCTestCase
+@interface ACPAnalyticsTVappTests : XCTestCase
 
 @end
 
-@implementation ACPAnalyticsSampleAppTests
+@implementation ACPAnalyticsTVappTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {
