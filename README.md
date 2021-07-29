@@ -63,24 +63,24 @@ make run-tests-locally
 
 ### [Analytics](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics)
 
-##### Importing the extension:
+#### Importing the extension:
 ```javascript
 import {ACPAnalytics} from '@adobe/react-native-acpanalytics';
 ```
 
-##### Getting the extension version:
+#### Getting the extension version:
 
 ```javascript
 ACPAnalytics.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPAnalytics version: " + version));
 ```
 
-##### Registering the extension with ACPCore:
+#### Registering the extension with ACPCore:
 
-> Note: It is recommended to initialize the SDK via native code inside your AppDelegate and MainApplication in iOS and Android respectively. However, you can still initialize the SDK in Javascript. For more information see how to initialize [Core](https://github.com/adobe/react-native-acpcore#initializing-the-sdk). 
+It is recommended to initialize the SDK via native code inside your AppDelegate and MainApplication in iOS and Android respectively.
 
 ##### **iOS**
 ```objective-c
-#import <RCTACPAnalytics/ACPAnalytics.h>
+#import <ACPAnalytics.h>
 
 [ACPAnalytics registerExtension];
 ```
@@ -92,55 +92,48 @@ import com.adobe.marketing.mobile.Analytics;
 Analytics.registerExtension();
 ```
 
-##### **Javascript:**
-```javascript
-import {ACPAnalytics} from '@adobe/react-native-acpanalytics';
-
-ACPAnalytics.registerExtension();
-```
-
-##### Get the tracking identifier:
+#### Get the tracking identifier:
 
 ```javascript
 ACPAnalytics.getTrackingIdentifier().then(identifier => console.log("AdobeExperienceSDK: Tracking identifier: " + identifier));
 ```
-##### Send queued hits:
+#### Send queued hits:
 
 ```javascript
 ACPAnalytics.sendQueuedHits();
 ```
 
-##### Get the queue size:
+#### Get the queue size:
 
 ```javascript
 ACPAnalytics.getQueueSize().then(size => console.log("AdobeExperienceSDK: Queue size: " + size));
 ```
 
-##### Clear queued hits:
+#### Clear queued hits:
 
 ```javascript
 ACPAnalytics.clearQueue();
 ```
 
-##### Set the custom visitor identifier:
+#### Set the custom visitor identifier:
 
 ```javascript
 ACPAnalytics.setVisitorIdentifier("yourVisitorId");
 ```
 
-##### Get the custom visitor identifier:
+#### Get the custom visitor identifier:
 
 ```javascript
 ACPAnalytics.getVisitorIdentifier().then(vid => console.log("AdobeExperienceSDK: Visitor identifier: " + vid));
 ```
 
-##### Track app actions:
+#### Track app actions:
 
 ```javascript
 ACPCore.trackAction("action", {"mytest": "action"});
 ```
 
-##### Track app states:
+#### Track app states:
 
 ```javascript
 ACPCore.trackState("state", {"mytest": "state"});

@@ -26,10 +26,6 @@ RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(R
     resolve([ACPAnalytics extensionVersion]);
 }
 
-RCT_EXPORT_METHOD(registerExtension) {
-    [ACPAnalytics registerExtension];
-}
-
 RCT_EXPORT_METHOD(getTrackingIdentifier: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     [ACPAnalytics getTrackingIdentifier:^(NSString * _Nullable trackingIdentifier) {
         resolve(trackingIdentifier);

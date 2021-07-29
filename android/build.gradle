@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -28,11 +28,10 @@ android {
 
 repositories {
     google()
-    jcenter()
     mavenCentral()
 }
 
 dependencies {
     implementation "com.facebook.react:react-native:+"
-    api "com.adobe.marketing.mobile:analytics:1.2.6"
+    api "com.adobe.marketing.mobile:analytics:1.+"
 }
