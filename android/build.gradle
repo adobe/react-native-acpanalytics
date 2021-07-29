@@ -22,7 +22,6 @@ android {
         versionName "1.0"
     }
     lintOptions {
-        checkReleaseBuilds false
         abortOnError false
     }
 }
