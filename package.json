@@ -1,6 +1,6 @@
 {
   "name": "@adobe/react-native-acpanalytics",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Adobe Experience Platform support for React Native apps.",
   "homepage": "https://aep-sdks.gitbook.io/docs/",
   "license": "Apache-2.0",
@@ -24,8 +24,8 @@
     "name": "Adobe Experience Platform SDK Team"
   },
   "peerDependencies": {
-    "react-native": ">=0.44.0",
-    "@adobe/react-native-acpcore": ">=1.2.5"
+    "react-native": ">=0.60.0",
+    "@adobe/react-native-acpcore": ">=2.0.0"
   },
   "devDependencies": {
     "@babel/generator": "^7.4.4",
@@ -45,5 +45,8 @@
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
     }
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.14.8"
   }
 }

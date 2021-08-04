@@ -23,12 +23,6 @@ describe('ACPAnalytics', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  test('registerExtension is called', async () => {
-    const spy = jest.spyOn(NativeModules.ACPAnalytics, 'registerExtension');
-    await ACPAnalytics.registerExtension();
-    expect(spy).toHaveBeenCalled();
-  });
-
   test('getTrackingIdentifier is called', async () => {
     const spy = jest.spyOn(NativeModules.ACPAnalytics, 'getTrackingIdentifier');
     await ACPAnalytics.getTrackingIdentifier();
