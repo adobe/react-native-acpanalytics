@@ -66,7 +66,7 @@ static void InitializeFlipper(UIApplication *application) {
   [self.window makeKeyAndVisible];
   
   [ACPCore setLogLevel:ACPMobileLogLevelVerbose];
-    [ACPCore configureWithAppId:@""];
+    [ACPCore configureWithAppId:@"yourAppId"];
     [ACPCore setWrapperType:ACPMobileWrapperTypeReactNative];
     [ACPIdentity registerExtension];
     [ACPLifecycle registerExtension];
