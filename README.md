@@ -8,10 +8,6 @@
 
 `@adobe/react-native-acpanalytics` is a wrapper around the iOS, tvOS and Android [AEP Analytics SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics) to allow for integration with React Native applications. Functionality to enable Adobe Analytics is provided entirely through JavaScript documented below.
 
-## Requirements
-- `@adobe/react-native-acpanalytics 1.x` requires `React Native 0.44.+`
-- `@adobe/react-native-acpanalytics 2.x` requires `React Native 0.60.+`
-
 ## Installation
 
 Install the SDK with [npm](https://www.npmjs.com/) and configure the native Android/iOS project in your react native project. Before installing the Analytics extension, it is recommended to first install the [Core extension](https://github.com/adobe/react-native-acpcore).
