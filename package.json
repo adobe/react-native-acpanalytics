@@ -25,7 +25,7 @@
   },
   "peerDependencies": {
     "react-native": ">=0.60.0",
-    "@adobe/react-native-acpcore": "git://github.com:adobe/react-native-acpcore.git#v-2.0.0"
+    "@adobe/react-native-acpcore": ">=2.0.0"
   },
   "devDependencies": {
     "@babel/generator": "^7.4.4",
