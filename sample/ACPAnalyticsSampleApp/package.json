@@ -13,7 +13,7 @@
     "react": "17.0.1",
     "react-native": "0.64.2",
     "@adobe/react-native-acpcore": ">=2.0.0",
-    "@adobe/react-native-acpanalytics": "file:../../adobe-react-native-acpanalytics-2.0.0.tgz"
+    "@adobe/react-native-acpanalytics": "file:../../adobe-react-native-acpanalytics-2.0.1.tgz"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
