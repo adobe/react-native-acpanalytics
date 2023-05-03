@@ -15,8 +15,8 @@
     "babel-preset-react-native": "2.1.0",
     "flow-typed": "^2.3.0",
     "flow-bin": "^0.92.0",
-    "react": "16.6.3",
-    "react-native": "0.58.3",
+    "react": "17.0.1",
+    "react-native": "0.64.4",
     "@adobe/react-native-acpcore": "*",
     "@adobe/react-native-acpanalytics": "*",
     "graceful-fs": "4.2.2"
