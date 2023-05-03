@@ -6,7 +6,7 @@
 [![CircleCI](https://img.shields.io/circleci/project/github/adobe/react-native-acpanalytics/main.svg?logo=circleci)](https://circleci.com/gh/adobe/workflows/react-native-acpanalytics) 
 [![license](https://img.shields.io/npm/l/@adobe/react-native-acpanalytics.svg)](https://github.com/adobe/react-native-acpanalytics/blob/main/LICENSE)
 
-`@adobe/react-native-acpanalytics` is a wrapper around the iOS, tvOS and Android [AEP Analytics SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics) to allow for integration with React Native applications. Functionality to enable Adobe Analytics is provided entirely through JavaScript documented below.
+`@adobe/react-native-acpanalytics` is a wrapper around the iOS, tvOS and Android [AEP Analytics SDK](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-analytics) to allow for integration with React Native applications. Functionality to enable Adobe Analytics is provided entirely through JavaScript documented below.
 
 ## Installation
 
@@ -60,7 +60,7 @@ make run-tests-locally
 
 ## Usage
 
-### [Analytics](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics)
+### Analytics
 
 #### Importing the extension:
 ```javascript
